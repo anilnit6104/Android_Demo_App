@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ctr_bg"
+    tools:context=".activity1">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.Collapsible_Toolbar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ctr_bg"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="snap|scroll|exitUntilCollapsed"
+            app:title="User Profile">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="300dp"
+                android:layout_height="270dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/dp3"
+                app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout_bg"
+        android:padding="30dp"
+        app:layout_anchor="@+id/nestedScrollView"
+        app:layout_anchorGravity="center"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="400dp">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:textStyle="bold"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="-356dp"
+                android:layout_toLeftOf="@+id/textView1"
+                android:layout_toEndOf="@+id/textView1"
+                android:text="Anil Kumar Patel"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="Phone:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="-356dp"
+                android:layout_toLeftOf="@+id/textView2"
+                android:layout_toEndOf="@+id/textView2"
+                android:text="7000865011"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:text="Email:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginRight="-356dp"
+                android:layout_toLeftOf="@+id/textView3"
+                android:layout_toEndOf="@+id/textView3"
+                android:textStyle="bold"
+                android:text="anilp6104@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+            <Button
+                android:id="@+id/upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="220dp"
+                android:backgroundTint="#DC143C"
+                android:rotationX="1"
+                android:text="upload Image" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="270dp"
+                android:backgroundTint="#DC143C"
+                android:gravity="center"
+                android:rotationX="1"
+                android:text="Logout"></Button>
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="#50C878"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_person_24"
+        app:fabSize="normal"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="end|bottom|left"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/white"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:fabSize="normal"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="bottom|end"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
